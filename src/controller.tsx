@@ -12,7 +12,7 @@ import type { IRegisterProps, IControl } from "./types.ts";
  * Pops for the controller field
  * @param props - Pops for the controller field
  */
-interface IControllerFieldPops {
+export interface IControllerFieldPops {
   onChange: (value: unknown) => void;
   value: string | number | readonly string[] | undefined;
   checked: boolean;
