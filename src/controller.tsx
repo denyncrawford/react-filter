@@ -5,11 +5,8 @@
  */
 
 // @deno-types="npm:@types/react@^18.0.0"
-import {
-  type HTMLProps,
-  type MutableRefObject,
-  useEffect,
-  useState,
+import type {
+  MutableRefObject,
 } from "react";
 import type { IRegisterProps, IControl } from "./types.ts";
 
@@ -43,7 +40,7 @@ export const Controller = (
             found.onChange({
               target: {
                 value,
-                checked: !!found.checked,
+                checked: !!value,
               }
             });
           }, 

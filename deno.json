@@ -1,6 +1,6 @@
 {
   "name": "@denyncrawford/react-filters",
-  "version": "0.0.56",
+  "version": "0.0.57",
   "exports": {
     ".": "./mod.ts",
     "./controller": "./src/controller.tsx"
