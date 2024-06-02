@@ -3,8 +3,6 @@
  * A react component that allows you to create search filters for your react application, using a simple api and input driven by default.
  * @module
  */
-
-// @deno-types="npm:@types/react@^18.0.0"
 import { type HTMLProps, useEffect, useState } from "react";
 import type { IRegisterProps, IControl } from "./types.ts";
 
