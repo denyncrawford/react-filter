@@ -4,7 +4,6 @@
  * @module
  */
 
-// @deno-types="npm:@types/react@^18.0.0"
 import type {
   MutableRefObject,
 } from "react";
