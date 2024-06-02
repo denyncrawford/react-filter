@@ -4,7 +4,6 @@
  * @module
  */
 
-
 // @deno-types="npm:@types/qs@6.9.15"
 import qs from "qs";
 import { type IO, IOType, type IFilterCommonOutput } from "./types.ts";

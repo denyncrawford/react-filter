@@ -3,7 +3,6 @@
  * @module
  */
 
-
 // deno-lint-ignore-file no-unused-vars
 // @deno-types="npm:@types/qs@6.9.15"
 import qs from "qs";
@@ -61,9 +60,7 @@ export const useFilter = (params?: IFilerProps) => {
   };
 
   const _setValue = (filter: IControllerFilter) => {
-
-    const filterType = filter.type || IOType.text
-
+    const filterType = filter.type || IOType.text;
 
     const serializedDefault: IControllerFilter = {
       ...filter,
