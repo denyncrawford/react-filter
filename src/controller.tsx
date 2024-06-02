@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
-import type {
-  IRegisterProps,
-  IControl,
-} from "./types.ts";
+/**
++  * This module contains the controller component
++  * A react component that allows you to create search filters for your react application, using a simple api and input driven by default.
++  * @module
++  */
+
+// @deno-types="npm:@types/react@18"
+import { type HTMLProps, useEffect, useState } from "react";
+import type { IRegisterProps, IControl } from "./types.ts";
 
 /**
  * Pops for the controller field
@@ -23,8 +27,8 @@ export const Controller = (
     control: IControl;
     render: (field: IControllerFieldPops) => JSX.Element;
   } & IRegisterProps
-) => {
-  const [found, setFound] = useState();
+): JSX.Element => {
+  const [found, setFound] = useState<HTMLProps<HTMLInputElement> | undefined>();
   useEffect(() => {
     const found = props.control.register(props);
     setFound(found);
@@ -34,9 +38,9 @@ export const Controller = (
     <>
       {found &&
         props.render({
-          onChange: found.onChange,
+          onChange: found.onChange as (value: unknown) => void,
           value: found.value,
-          checked: found.checked,
+          checked: !!found.checked,
         })}
     </>
   );

@@ -1,3 +1,8 @@
+/**
+ * This module contains all the types of the module
+ * @module
+ */
+
 // deno-lint-ignore-file no-explicit-any
 import type { HTMLProps, MutableRefObject } from "react";
 

@@ -1,3 +1,9 @@
+/**
+ * This is the main file that exports the filtering component
+ * @module
+ */
+
+
 // deno-lint-ignore-file no-unused-vars
 // @deno-types="npm:@types/qs@6.9.15"
 import qs from "qs";

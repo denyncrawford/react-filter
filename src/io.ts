@@ -1,3 +1,10 @@
+/**
+ * This module contains the IOs that are used to serialize and deserialize the values and data structures, is exports
+ * some utils to create safe IOs that can handle undefined values
+ * @module
+ */
+
+
 // @deno-types="npm:@types/qs@6.9.15"
 import qs from "qs";
 import { type IO, IOType, type IFilterCommonOutput } from "./types.ts";
