@@ -54,10 +54,10 @@ import { createSafeIO } from "@denyncrawford/react-filters";
 
 const dateIO = createSafeIO<string, Date>({
   serialize: ({ v, k }) => ({
-    value: v.toISOString(),
+    value: v.toISOString(), // you can format the date to diplay it as you wan
     key: k,
   }),
-  deserialize: ({ value }) => new Date(value),
+  deserialize: ({ value }) => new Date(value), // you can parse your date string as a date again
 });
 ```
 
