@@ -4,12 +4,20 @@ import type {
   IControl,
 } from "./types.ts";
 
+/**
+ * Pops for the controller field
+ * @param props - Pops for the controller field
+ */
 interface IControllerFieldPops {
   onChange: (value: unknown) => void;
   value: string | number | readonly string[] | undefined;
   checked: boolean;
 }
 
+/**
+ * Renders the controller field, this is util when you have a custom input that needs to be registered
+ * @param props - Renders the controller field
+ */
 export const Controller = (
   props: {
     control: IControl;

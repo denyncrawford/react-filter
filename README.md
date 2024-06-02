@@ -1,5 +1,7 @@
 # React Search Filters (WIP) 🔍
 
+[![JSR](https://jsr.io/badges/@denyncrawford/react-filters)](https://jsr.io/@denyncrawford/react-filters)
+
 A react hook that allows you to create search filters for your react application, using a simple api and input driven by default.
 
 It comes with a set of default IOs that can be used to serialize and deserialize the values, but you can also create your own custom IOs to handle different types of values and data structures.
