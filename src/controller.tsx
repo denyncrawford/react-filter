@@ -3,7 +3,9 @@
  * A react component that allows you to create search filters for your react application, using a simple api and input driven by default.
  * @module
  */
-import { type HTMLProps, useEffect, useState } from "react";
+
+// @deno-types="npm:@types/react@^18.0.0"
+import { type HTMLProps, type MutableRefObject, useEffect, useState } from "react";
 import type { IRegisterProps, IControl } from "./types.ts";
 
 /**
@@ -22,13 +24,13 @@ export interface IControllerFieldPops {
  */
 export const Controller = (
   props: {
-    control: IControl;
+    control: MutableRefObject<IControl>;
     render: (field: IControllerFieldPops) => JSX.Element;
   } & IRegisterProps
 ): JSX.Element => {
   const [found, setFound] = useState<HTMLProps<HTMLInputElement> | undefined>();
   useEffect(() => {
-    const found = props.control.register(props);
+    const found = props.control.current.register(props);
     setFound(found);
   }, [props.control, props.name]);
 
