@@ -4,7 +4,7 @@
  * @module
  */
 
-// @deno-types="npm:@types/react@18"
+// @deno-types="npm:@types/react@^18.0.0"
 import { type HTMLProps, useEffect, useState } from "react";
 import type { IRegisterProps, IControl } from "./types.ts";
 
