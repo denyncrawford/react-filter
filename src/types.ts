@@ -3,8 +3,10 @@
  * @module
  */
 
-// deno-lint-ignore-file no-explicit-any
-import type { HTMLProps, MutableRefObject } from "react";
+// deno-lint-ignore-file no-explicit-any verbatim-module-syntax
+
+// @deno-types="npm:@types/react@^18.0.0"
+import { HTMLProps, MutableRefObject } from "react";
 
 /**
  * This enum contains the different types of filters that can be used

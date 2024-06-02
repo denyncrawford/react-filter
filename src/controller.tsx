@@ -1,12 +1,13 @@
+// deno-lint-ignore-file verbatim-module-syntax
 /**
  * This module contains the controller component
  * A react component that allows you to create search filters for your react application, using a simple api and input driven by default.
  * @module
  */
 
-import type {
-  MutableRefObject,
-} from "react";
+// @deno-types="npm:@types/react@^18.0.0"
+import { FormEvent, MutableRefObject } from "react";
+
 import type { IRegisterProps, IControl } from "./types.ts";
 
 /**
@@ -36,13 +37,13 @@ export const Controller = (
       {found &&
         props.render({
           onChange: (value: unknown) => {
-            found.onChange({
+            found.onChange?.({
               target: {
                 value,
                 checked: !!value,
-              }
-            });
-          }, 
+              },
+            } as unknown as FormEvent<HTMLInputElement>);
+          },
           value: found.value,
           checked: !!found.checked,
         })}
