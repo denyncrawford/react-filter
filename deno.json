@@ -1,0 +1,19 @@
+{
+  "name": "@denyncrawford/react-filters",
+  "version": "0.0.48",
+  "exports": {
+    ".": "./mod.ts",
+    "./controller": "./src/controller.tsx"
+  },
+  "imports": {
+    "react": "npm:react@^18",
+    "qs": "npm:qs@^6.12.1"
+  },
+  "tasks": {
+    "publish": "deno publish --allow-slow-types"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["deno.window", "dom"]
+  }
+}
