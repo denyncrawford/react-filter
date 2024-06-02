@@ -5,7 +5,12 @@
  */
 
 // @deno-types="npm:@types/react@^18.0.0"
-import { type HTMLProps, type MutableRefObject, useEffect, useState } from "react";
+import {
+  type HTMLProps,
+  type MutableRefObject,
+  useEffect,
+  useState,
+} from "react";
 import type { IRegisterProps, IControl } from "./types.ts";
 
 /**
@@ -28,17 +33,20 @@ export const Controller = (
     render: (field: IControllerFieldPops) => JSX.Element;
   } & IRegisterProps
 ): JSX.Element => {
-  const [found, setFound] = useState<HTMLProps<HTMLInputElement> | undefined>();
-  useEffect(() => {
-    const found = props.control.current.register(props);
-    setFound(found);
-  }, [props.control, props.name]);
+  const found = props.control.current.register(props);
 
   return (
     <>
       {found &&
         props.render({
-          onChange: found.onChange as (value: unknown) => void,
+          onChange: (value: unknown) => {
+            found.onChange({
+              target: {
+                value,
+                checked: !!found.checked,
+              }
+            });
+          }, 
           value: found.value,
           checked: !!found.checked,
         })}
