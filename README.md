@@ -156,6 +156,14 @@ const MyComponent = () => {
 
 You can check the API documentation [here](https://jsr.io/@denyncrawford/react-filters/doc).
 
+## Next Steps
+
+- Enhance types
+- I/O Validations
+- Add more I/O handlers for common inputs and dta structures
+- Add a quick unstyled component to display keys and values
+- Test internationalization and JSX I/O serialization capabilities
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
