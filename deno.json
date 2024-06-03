@@ -3,7 +3,7 @@
   "version": "0.0.60",
   "exports": {
     ".": "./mod.ts",
-    "./controller": "./src/controller.tsx"
+    "./controller": "./src/controller.ts"
   },
   "imports": {
     "react": "npm:react@^18",
