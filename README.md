@@ -8,6 +8,10 @@ It comes with a set of default IOs that can be used to serialize and deserialize
 
 > **Note:** This is a work in progress and the API is still subject to change.
 
+## Demo
+
+You can see a live demo [here](https://react-filters.deno.dev)
+
 ## Installation
 
 This packages is only published to the jsr registry, please follow the instructions on the module page to see how to install it for your specific runtime/package manager.
