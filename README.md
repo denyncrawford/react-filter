@@ -14,11 +14,11 @@ You can see a live demo [here](https://react-filters.deno.dev)
 
 ## Installation
 
-This packages is only published to the jsr registry, please follow the instructions on [the module page](https://jsr.io/@denyncrawford/react-filters) to see how to install it for your specific runtime/package manager.
+This package is published on the jsr registry, please follow the instructions on [the module's page](https://jsr.io/@denyncrawford/react-filters) to see how to install it for your specific runtime/package manager.
 
 ## Usage
 
-Once the package is installed, you can import the `useFilter` hook from the package and use it in your React component. Here's an example:
+Once installed, you can import the `useFilter` hook from the package and use it in your React component. Here's an example:
 
 ```tsx
 import { useFilter } from "@denyncrawford/react-filters";
