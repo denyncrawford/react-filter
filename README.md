@@ -8,6 +8,10 @@ It comes with a set of default IOs that can be used to serialize and deserialize
 
 > **Note:** This is a work in progress and the API is still subject to change.
 
+## Why?
+
+Creating filters for API requests is often a tedious and slow process. Typically, you end up implementing an overly complex solution to visualize what you're filtering in the UI, whether you're using React Query or directly making requests with Fetch or Axios. React Search Filters handles all the underlying work and provides an easy way to manage your filters using a key, value, and label approach. Inspired by React Hook Form, this module is designed with an input-first philosophy.
+
 ## Demo
 
 You can see a live demo [here](https://react-filters.deno.dev)
