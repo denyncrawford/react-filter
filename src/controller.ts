@@ -7,7 +7,8 @@
 
 
 import type { IRegisterProps, IControl } from "./types.ts";
-import { Fragment as _Fragment, jsx as _jsx } from "react/jsx-runtime";
+// @deno-types="npm:@types/react@^18.0.0"
+import { Fragment, createElement } from "react";
 
 
 /**
@@ -29,8 +30,11 @@ export const Controller = (props: {
   render: (field: IControllerFieldPops) => JSX.Element;
 } & IRegisterProps) => {
   const found = props.control.current.register(props);
-  return /*#__PURE__*/_jsx(_Fragment, {
-    children: found && props.render({
+
+  return createElement(
+    Fragment,
+    null,
+    found && props.render({
       onChange: value => {
         let _found$onChange;
         (_found$onChange = found.onChange) === null || _found$onChange === void 0 || _found$onChange.call(found, {
@@ -43,5 +47,5 @@ export const Controller = (props: {
       value: found.value,
       checked: !!found.checked
     })
-  });
+  );
 };

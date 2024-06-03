@@ -7,7 +7,6 @@
   },
   "imports": {
     "react": "npm:react@^18",
-    "react/jsx-runtime": "npm:react@^18/jsx-runtime",
     "qs": "npm:qs@^6.12.1"
   },
   "tasks": {
